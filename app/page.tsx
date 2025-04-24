@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { ArrowRight, FileText, Linkedin, Mail, Phone } from "lucide-react"
+iimport Link from "next/link"
+import { ArrowRight, Linkedin, Mail, Phone } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import ProjectCard from "@/components/project-card"
@@ -10,9 +10,6 @@ import ProjectGallery from "@/components/project-gallery"
 import MobileNav from "@/components/mobile-nav"
 
 export default function Home() {
-  // Resume path
-  const resumePath = "/resume.pdf" // This will be the path to your resume file
-
   // Image paths for all sections
   const imagePaths = {
     profile: "/images/profile.jpg",
@@ -84,13 +81,7 @@ export default function Home() {
                 <span className="sr-only">LinkedIn</span>
               </Button>
             </Link>
-            <Button variant="outline" size="sm" className="hidden md:flex items-center gap-2" asChild>
-              <a href={resumePath} download="William_Stratton_Resume.pdf">
-                <FileText className="h-4 w-4" />
-                Download Resume
-              </a>
-            </Button>
-            <MobileNav resumePath={resumePath} />
+            <MobileNav />
           </div>
         </div>
       </header>

@@ -2,16 +2,12 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { FileText, Linkedin, Mail, Menu, Phone, X } from "lucide-react"
+import { Linkedin, Mail, Menu, Phone, X } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
-interface MobileNavProps {
-  resumePath: string
-}
-
-export default function MobileNav({ resumePath }: MobileNavProps) {
+export default function MobileNav() {
   const [open, setOpen] = useState(false)
 
   return (
@@ -48,37 +44,29 @@ export default function MobileNav({ resumePath }: MobileNavProps) {
             </Link>
           </nav>
           <div className="mt-auto border-t pt-4">
-            <div className="flex flex-col gap-4">
-              <Button className="w-full" asChild>
-                <a href={resumePath} download="William_Stratton_Resume.pdf">
-                  <FileText className="mr-2 h-4 w-4" />
-                  Download Resume
-                </a>
-              </Button>
-              <div className="flex justify-center gap-4">
-                <Link
-                  href="https://www.linkedin.com/in/william-stratton-wlstratton"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button variant="ghost" size="icon">
-                    <Linkedin className="h-5 w-5" />
-                    <span className="sr-only">LinkedIn</span>
-                  </Button>
-                </Link>
-                <Link href="mailto:wlstratton111@gmail.com">
-                  <Button variant="ghost" size="icon">
-                    <Mail className="h-5 w-5" />
-                    <span className="sr-only">Email</span>
-                  </Button>
-                </Link>
-                <Link href="tel:4042340474">
-                  <Button variant="ghost" size="icon">
-                    <Phone className="h-5 w-5" />
-                    <span className="sr-only">Phone</span>
-                  </Button>
-                </Link>
-              </div>
+            <div className="flex justify-center gap-4">
+              <Link
+                href="https://www.linkedin.com/in/william-stratton-wlstratton"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="ghost" size="icon">
+                  <Linkedin className="h-5 w-5" />
+                  <span className="sr-only">LinkedIn</span>
+                </Button>
+              </Link>
+              <Link href="mailto:wlstratton111@gmail.com">
+                <Button variant="ghost" size="icon">
+                  <Mail className="h-5 w-5" />
+                  <span className="sr-only">Email</span>
+                </Button>
+              </Link>
+              <Link href="tel:4042340474">
+                <Button variant="ghost" size="icon">
+                  <Phone className="h-5 w-5" />
+                  <span className="sr-only">Phone</span>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
