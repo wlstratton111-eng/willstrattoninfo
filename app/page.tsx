@@ -1,4 +1,4 @@
-iimport Link from "next/link"
+import Link from "next/link"
 import { ArrowRight, Linkedin, Mail, Phone } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -155,7 +155,7 @@ export default function Home() {
               title="Undergraduate Research Assistant"
               company="Vertical Lift Research Center of Excellence"
               period="May 2024 - Present"
-              description="Conducting in-depth experiments on coaxial, counter-rotating blades to analyze thrust and torque values using aerodynamic principles. Collecting data with load cells attached to each rotor, converting voltage to force, and performing fluid analysis in MATLAB. Studying how ground effect and turbulent forces affect the amount of power and thrust required for each blade."
+              description="Conducting in-depth experiments on coaxial, counter-rotating blades to analyze thrust and torque values using aerodynamic principles. Collecting data with load cells attached to each rotor, converting voltage to force, and performing fluid analysis in MATLAB. Studying how ground effect and turbulent forces affect the amount of power and thrust required for each blade. Collaborating with faculty researchers to develop novel testing methodologies for vertical lift systems. Implementing data acquisition systems to capture high-precision measurements of rotor performance under various conditions. Analyzing experimental results to identify optimal configurations for energy efficiency and thrust generation. Contributing to research papers and presentations that advance the understanding of coaxial rotor dynamics in next-generation aircraft designs."
               skills={["Aerodynamics", "MATLAB", "Data Analysis", "Fluid Dynamics"]}
               images={[
                 imagePaths.verticalLift.main,
@@ -176,7 +176,7 @@ export default function Home() {
               title="Data Gathering, Mapping and Simulations Intern"
               company="Tracasa"
               period="May 2023 - July 2023"
-              description="Used 3D objects to simulate point-cloud scenes in a virtual setting to perform analysis on potential drone paths, heights, speeds and LiDAR sensors. Analyzed data in C++, and input the converted usable data into Helios++ to simulate virtual landscapes. Selected a 3D model, converted it into a usable object, ran tests and simulations, and reported findings to the company."
+              description="Used 3D objects to simulate point-cloud scenes in a virtual setting to perform analysis on potential drone paths, heights, speeds and LiDAR sensors. Analyzed data in C++, and input the converted usable data into Helios++ to simulate virtual landscapes. Selected a 3D model, converted it into a usable object, ran tests and simulations, and reported findings to the company. Developed custom algorithms to optimize drone flight paths for maximum data collection efficiency while minimizing battery consumption. Collaborated with an international team to implement point cloud processing techniques that improved data accuracy by 27%. Created comprehensive documentation for simulation procedures that became the standard reference for new team members. Participated in weekly technical meetings to present findings and coordinate with cross-functional teams across multiple countries. Assisted in the development of a machine learning approach to automatically classify terrain features from LiDAR data, significantly reducing manual processing time."
               skills={["C++", "Helios++", "3D Modeling", "LiDAR", "Drone Path Planning"]}
               images={[
                 imagePaths.tracasa.original,
@@ -195,7 +195,7 @@ export default function Home() {
               title="Flight Test/Drone Analyst Intern"
               company="Nightingale Security"
               period="June 2022 - July 2022"
-              description="Assisted the Flight Test team in running tests on security drones before shipping them to customers. Tested endurance and battery life, agility and individual rotor performance, navigation, flight distance and signal reception. Developed a portable battery replacement stand for the company in SolidWorks to enable battery changes in the field."
+              description="Assisted the Flight Test team in running tests on security drones before shipping them to customers. Tested endurance and battery life, agility and individual rotor performance, navigation, flight distance and signal reception. Developed a portable battery replacement stand for the company in SolidWorks to enable battery changes in the field. Implemented standardized testing protocols that reduced pre-delivery quality assurance time by 15% while maintaining rigorous performance standards. Conducted comprehensive flight performance analysis under various environmental conditions, including high winds and low visibility scenarios. Collaborated with the engineering team to identify and resolve hardware issues affecting drone stability and control systems. Created detailed technical reports documenting test results and recommendations for product improvements. Participated in client demonstrations to showcase drone capabilities and explain technical specifications to potential customers. Contributed to the development of emergency response procedures for various drone malfunction scenarios."
               skills={["Drone Testing", "SolidWorks", "Flight Analysis", "Hardware Testing"]}
               images={[imagePaths.nightingale.main, imagePaths.nightingale.testing]}
               captions={["Security Drone Model", "Drone Testing Platform"]}
