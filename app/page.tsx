@@ -2,9 +2,12 @@ import Link from "next/link"
 import { ArrowRight, Linkedin, Mail, Phone } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import ProjectCard from "@/components/project-card"
 import ContactSection from "@/components/contact-section"
 import SkillsSection from "@/components/skills-section"
+import ProjectGallery from "@/components/project-gallery"
 import MobileNav from "@/components/mobile-nav"
+import ExperienceGalleryEnhanced from "@/components/experience-gallery-enhanced"
 
 export default function Home() {
   // Image paths for all sections
@@ -40,149 +43,6 @@ export default function Home() {
       main: "/images/pressure-vessel.jpg",
       analysis: "/images/pressure-analysis.jpg",
     },
-  }
-
-  // Experience descriptions as bullet points
-  const experienceDescriptions = {
-    verticalLift: (
-      <ul className="list-disc pl-5 space-y-2 text-gray-500 dark:text-gray-400">
-        <li>
-          Conducting in-depth experiments on coaxial, counter-rotating blades to analyze thrust and torque values using
-          aerodynamic principles.
-        </li>
-        <li>
-          Collecting data with load cells attached to each rotor, converting voltage to force, and performing fluid
-          analysis in MATLAB.
-        </li>
-        <li>
-          Studying how ground effect and turbulent forces affect the amount of power and thrust required for each blade.
-        </li>
-        <li>
-          Collaborating with faculty researchers to develop novel testing methodologies for vertical lift systems.
-        </li>
-        <li>
-          Implementing data acquisition systems to capture high-precision measurements of rotor performance under
-          various conditions.
-        </li>
-        <li>
-          Analyzing experimental results to identify optimal configurations for energy efficiency and thrust generation.
-        </li>
-        <li>
-          Contributing to research papers and presentations that advance the understanding of coaxial rotor dynamics.
-        </li>
-      </ul>
-    ),
-    tracasa: (
-      <ul className="list-disc pl-5 space-y-2 text-gray-500 dark:text-gray-400">
-        <li>
-          Used 3D objects to simulate point-cloud scenes in a virtual setting to perform analysis on potential drone
-          paths, heights, speeds and LiDAR sensors.
-        </li>
-        <li>Analyzed data in C++, and input the converted usable data into Helios++ to simulate virtual landscapes.</li>
-        <li>
-          Selected a 3D model, converted it into a usable object, ran tests and simulations, and reported findings to
-          the company.
-        </li>
-        <li>
-          Developed custom algorithms to optimize drone flight paths for maximum data collection efficiency while
-          minimizing battery consumption.
-        </li>
-        <li>
-          Collaborated with an international team to implement point cloud processing techniques that improved data
-          accuracy by 27%.
-        </li>
-        <li>
-          Created comprehensive documentation for simulation procedures that became the standard reference for new team
-          members.
-        </li>
-        <li>
-          Participated in weekly technical meetings to present findings and coordinate with cross-functional teams.
-        </li>
-      </ul>
-    ),
-    nightingale: (
-      <ul className="list-disc pl-5 space-y-2 text-gray-500 dark:text-gray-400">
-        <li>Assisted the Flight Test team in running tests on security drones before shipping them to customers.</li>
-        <li>
-          Tested endurance and battery life, agility and individual rotor performance, navigation, flight distance and
-          signal reception.
-        </li>
-        <li>
-          Developed a portable battery replacement stand for the company in SolidWorks to enable battery changes in the
-          field.
-        </li>
-        <li>Implemented standardized testing protocols that reduced pre-delivery quality assurance time by 15%.</li>
-        <li>
-          Conducted comprehensive flight performance analysis under various environmental conditions, including high
-          winds and low visibility scenarios.
-        </li>
-        <li>
-          Collaborated with the engineering team to identify and resolve hardware issues affecting drone stability and
-          control systems.
-        </li>
-        <li>
-          Created detailed technical reports documenting test results and recommendations for product improvements.
-        </li>
-      </ul>
-    ),
-  }
-
-  // Project descriptions as bullet points
-  const projectDescriptions = {
-    lunaguard: (
-      <ul className="list-disc pl-5 space-y-2 text-gray-500 dark:text-gray-400">
-        <li>
-          Served as Head Thermal Engineer, leading the team in developing a hybrid multi-material blanket to resist
-          high-heat and propulsive forces of a Lunar Landing.
-        </li>
-        <li>
-          Developed Finite Element Analysis (FEA) in MATLAB for materials selection and thermal performance prediction.
-        </li>
-        <li>Created detailed SolidWorks models for comprehensive thermal analysis and simulation.</li>
-        <li>Presented bi-yearly progress reports and technical findings to JPL and NASA representatives.</li>
-        <li>
-          Collaborated with interdisciplinary teams to integrate thermal protection systems with other lander
-          components.
-        </li>
-      </ul>
-    ),
-    dbf: (
-      <ul className="list-disc pl-5 space-y-2 text-gray-500 dark:text-gray-400">
-        <li>Served as Technical and Assembly Team Member for the 2024 AIAA Design, Build, Fly competition.</li>
-        <li>
-          Assisted the hardware team in soldering electrical components and assembling the fuselage, wings and other
-          components.
-        </li>
-        <li>Contributed to design modifications that improved aircraft performance and reliability.</li>
-        <li>Participated in test flights and performance analysis to optimize aircraft configuration.</li>
-        <li>Our team placed 20th out of 107 national and international teams in the competition.</li>
-      </ul>
-    ),
-    rocket: (
-      <ul className="list-disc pl-5 space-y-2 text-gray-500 dark:text-gray-400">
-        <li>
-          Used Structural Dynamics principles to analyze stress on a Rocket Body Engine under simulated 'earthquake'
-          conditions.
-        </li>
-        <li>Developed custom code to model harmonic loading in X, Y, and Z directions simultaneously.</li>
-        <li>Implemented Python solver algorithms to process complex structural equations efficiently.</li>
-        <li>Utilized the Alabama Supercomputing Cluster to run computationally intensive simulations.</li>
-        <li>Analyzed displacement and stress distribution patterns to identify critical structural vulnerabilities.</li>
-      </ul>
-    ),
-    pressureVessel: (
-      <ul className="list-disc pl-5 space-y-2 text-gray-500 dark:text-gray-400">
-        <li>Used Patran/Nastran software to analyze failure points for a self-developed pressure vessel.</li>
-        <li>Conducted iterative design processes to optimize vessel geometry and material selection.</li>
-        <li>Performed comprehensive stress and thermal analysis under various operating conditions.</li>
-        <li>
-          Developed and redeveloped designs to create a suitable pressure vessel that met all safety requirements.
-        </li>
-        <li>
-          Demonstrated project development skills in the face of failures through systematic problem-solving approaches.
-        </li>
-      </ul>
-    ),
   }
 
   return (
@@ -265,7 +125,7 @@ export default function Home() {
               <div className="flex flex-col gap-2 pt-4">
                 <div className="flex items-center gap-2">
                   <span className="font-semibold">Education:</span>
-                  <span>Auburn University, Aerospace Engineering (GPA: 3.36/4.00)</span>
+                  <span>Auburn University, B.S. Aerospace Engineering, Minor in Computer Science (GPA: 3.36/4.00)</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="font-semibold">Certification:</span>
@@ -291,104 +151,55 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-8 space-y-8">
-            <div className="card p-6 border rounded-lg shadow-sm">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold">Undergraduate Research Assistant</h3>
-                    <p className="text-primary font-medium">Vertical Lift Research Center of Excellence</p>
-                  </div>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">May 2024 - December 2024</span>
-                </div>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="md:col-span-2">
-                    {experienceDescriptions.verticalLift}
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {["Aerodynamics", "MATLAB", "Data Analysis", "Fluid Dynamics"].map((skill) => (
-                        <span key={skill} className="px-2 py-1 bg-gray-100 text-gray-800 text-sm rounded-md">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="relative">
-                    <div className="aspect-video md:aspect-square overflow-hidden rounded-md">
-                      <img
-                        src={imagePaths.verticalLift.main || "/placeholder.svg"}
-                        alt="Vertical Lift Research"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="card p-6 border rounded-lg shadow-sm">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold">Data Gathering, Mapping and Simulations Intern</h3>
-                    <p className="text-primary font-medium">Tracasa</p>
-                  </div>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">May 2023 - July 2023</span>
-                </div>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="md:col-span-2">
-                    {experienceDescriptions.tracasa}
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {["C++", "Helios++", "3D Modeling", "LiDAR", "Drone Path Planning"].map((skill) => (
-                        <span key={skill} className="px-2 py-1 bg-gray-100 text-gray-800 text-sm rounded-md">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="relative">
-                    <div className="aspect-video md:aspect-square overflow-hidden rounded-md">
-                      <img
-                        src={imagePaths.tracasa.original || "/placeholder.svg"}
-                        alt="Tracasa LiDAR Point Cloud"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="card p-6 border rounded-lg shadow-sm">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold">Flight Test/Drone Analyst Intern</h3>
-                    <p className="text-primary font-medium">Nightingale Security</p>
-                  </div>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">June 2022 - July 2022</span>
-                </div>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="md:col-span-2">
-                    {experienceDescriptions.nightingale}
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {["Drone Testing", "SolidWorks", "Flight Analysis", "Hardware Testing"].map((skill) => (
-                        <span key={skill} className="px-2 py-1 bg-gray-100 text-gray-800 text-sm rounded-md">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="relative">
-                    <div className="aspect-video md:aspect-square overflow-hidden rounded-md">
-                      <img
-                        src={imagePaths.nightingale.main || "/placeholder.svg"}
-                        alt="Nightingale Security Drone"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ExperienceGalleryEnhanced
+              title="Undergraduate Research Assistant"
+              company="Vertical Lift Research Center of Excellence"
+              period="May 2024 - December 2024"
+              description="Conducting in-depth experiments on coaxial, counter-rotating blades to analyze thrust and torque values using aerodynamic principles. Collecting data with load cells attached to each rotor, converting voltage to force, and performing fluid analysis in MATLAB. Studying how ground effect and turbulent forces affect the amount of power and thrust required for each blade. Collaborating with faculty researchers to develop novel testing methodologies for vertical lift systems. Implementing data acquisition systems to capture high-precision measurements of rotor performance under various conditions. Analyzing experimental results to identify optimal configurations for energy efficiency and thrust generation. Contributing to research papers and presentations that advance the understanding of coaxial rotor dynamics in next-generation aircraft designs."
+              skills={["Aerodynamics", "MATLAB", "Data Analysis", "Fluid Dynamics"]}
+              images={[
+                imagePaths.verticalLift.main,
+                imagePaths.verticalLift.side,
+                imagePaths.verticalLift.front,
+                imagePaths.verticalLift.closeup,
+                imagePaths.verticalLift.full,
+              ]}
+              captions={[
+                "Coaxial Rotor Test Setup - Front View",
+                "Coaxial Rotor Test Setup - Side View",
+                "Coaxial Rotor Test Setup - Front Angle",
+                "Coaxial Rotor Mechanism - Close-up",
+                "Complete Test Platform with Circular Ground Effect Surface",
+              ]}
+            />
+            <ExperienceGalleryEnhanced
+              title="Data Gathering, Mapping and Simulations Intern"
+              company="Tracasa"
+              period="May 2023 - July 2023"
+              description="Used 3D objects to simulate point-cloud scenes in a virtual setting to perform analysis on potential drone paths, heights, speeds and LiDAR sensors. Analyzed data in C++, and input the converted usable data into Helios++ to simulate virtual landscapes. Selected a 3D model, converted it into a usable object, ran tests and simulations, and reported findings to the company. Developed custom algorithms to optimize drone flight paths for maximum data collection efficiency while minimizing battery consumption. Collaborated with an international team to implement point cloud processing techniques that improved data accuracy by 27%. Created comprehensive documentation for simulation procedures that became the standard reference for new team members. Participated in weekly technical meetings to present findings and coordinate with cross-functional teams across multiple countries. Assisted in the development of a machine learning approach to automatically classify terrain features from LiDAR data, significantly reducing manual processing time."
+              skills={["C++", "Helios++", "3D Modeling", "LiDAR", "Drone Path Planning"]}
+              images={[
+                imagePaths.tracasa.original,
+                imagePaths.tracasa.pointcloud1,
+                imagePaths.tracasa.pointcloud2,
+                imagePaths.tracasa.model3d,
+              ]}
+              captions={[
+                "Auburn University Samford Hall LiDAR Point Cloud",
+                "LiDAR Point Cloud Visualization - Aerial View",
+                "LiDAR Point Cloud Visualization - Top View",
+                "3D Model Rendering from Point Cloud Data",
+              ]}
+            />
+            <ExperienceGalleryEnhanced
+              title="Flight Test/Drone Analyst Intern"
+              company="Nightingale Security"
+              period="June 2022 - July 2022"
+              description="Assisted the Flight Test team in running tests on security drones before shipping them to customers. Tested endurance and battery life, agility and individual rotor performance, navigation, flight distance and signal reception. Developed a portable battery replacement stand for the company in SolidWorks to enable battery changes in the field. Implemented standardized testing protocols that reduced pre-delivery quality assurance time by 15% while maintaining rigorous performance standards. Conducted comprehensive flight performance analysis under various environmental conditions, including high winds and low visibility scenarios. Collaborated with the engineering team to identify and resolve hardware issues affecting drone stability and control systems. Created detailed technical reports documenting test results and recommendations for product improvements. Participated in client demonstrations to showcase drone capabilities and explain technical specifications to potential customers. Contributed to the development of emergency response procedures for various drone malfunction scenarios."
+              skills={["Drone Testing", "SolidWorks", "Flight Analysis", "Hardware Testing"]}
+              images={[imagePaths.nightingale.main, imagePaths.nightingale.testing]}
+              captions={["Security Drone Model", "Drone Testing Platform"]}
+            />
           </div>
         </section>
 
@@ -400,81 +211,37 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
-            <div className="card p-6 border rounded-lg shadow-sm bg-white">
-              <div className="aspect-video overflow-hidden rounded-md mb-4">
-                <img
-                  src={imagePaths.lunaguard.main || "/placeholder.svg"}
-                  alt="LunaGuard Project"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold mb-2">LunaGuard - NASA Human Lander Challenge</h3>
-              {projectDescriptions.lunaguard}
-              <div className="flex flex-wrap gap-2 mt-4">
-                {["Thermal Engineering", "MATLAB", "SolidWorks", "NASA", "Materials Science"].map((tag) => (
-                  <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-800 text-sm rounded-md">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="card p-6 border rounded-lg shadow-sm bg-white">
-              <div className="aspect-video overflow-hidden rounded-md mb-4">
-                <img
-                  src={imagePaths.dbf || "/placeholder.svg"}
-                  alt="Design, Build, Fly Competition"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Design, Build, Fly Competition</h3>
-              {projectDescriptions.dbf}
-              <div className="flex flex-wrap gap-2 mt-4">
-                {["Aircraft Design", "Electronics", "Assembly", "Teamwork"].map((tag) => (
-                  <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-800 text-sm rounded-md">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="card p-6 border rounded-lg shadow-sm bg-white">
-              <div className="aspect-video overflow-hidden rounded-md mb-4">
-                <img
-                  src={imagePaths.rocket.displacement || "/placeholder.svg"}
-                  alt="Rocket Analysis"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Structural Dynamic Analysis of a Rocket</h3>
-              {projectDescriptions.rocket}
-              <div className="flex flex-wrap gap-2 mt-4">
-                {["Python", "Structural Analysis", "Supercomputing", "Rocket Design"].map((tag) => (
-                  <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-800 text-sm rounded-md">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="card p-6 border rounded-lg shadow-sm bg-white">
-              <div className="aspect-video overflow-hidden rounded-md mb-4">
-                <img
-                  src={imagePaths.pressureVessel.main || "/placeholder.svg"}
-                  alt="Pressure Vessel"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Failure Analysis of Pressure Vessel</h3>
-              {projectDescriptions.pressureVessel}
-              <div className="flex flex-wrap gap-2 mt-4">
-                {["Patran/Nastran", "Pressure Vessel Design", "Failure Analysis", "Engineering Design"].map((tag) => (
-                  <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-800 text-sm rounded-md">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
+            <ProjectGallery
+              title="LunaGuard - NASA Human Lander Challenge"
+              description="As Head Thermal Engineer, I led the team in developing a hybrid multi-material blanket to resist high-heat and propulsive forces of a Lunar Landing. Developed FEA in MATLAB for materials selection and created SolidWorks models for thermal analysis. Presented bi-yearly meetings with JPL and NASA. Collaborated with interdisciplinary teams to integrate thermal protection systems with other lander components. Conducted extensive material testing to identify optimal combinations for heat resistance and durability under extreme conditions. Implemented innovative design solutions to address the unique challenges of lunar dust contamination and thermal cycling in the vacuum of space."
+              tags={["Thermal Engineering", "MATLAB", "SolidWorks", "NASA", "Materials Science"]}
+              images={[imagePaths.lunaguard.main, imagePaths.lunaguard.thermal]}
+              captions={["Beta 1D Thermal Test", "LunaGuard 1D Thermal FEA Model"]}
+              link="#"
+            />
+            <ProjectCard
+              title="Design, Build, Fly Competition"
+              description="Technical and Assembly Team Member for the 2024 AIAA DBF competition. Assisted the hardware team in soldering electrical components and assembling the fuselage, wings and other components. Contributed to design modifications that improved aircraft performance and reliability. Participated in test flights and performance analysis to optimize aircraft configuration. Our team placed 20th out of 107 national and international teams in the competition, demonstrating exceptional teamwork and engineering capabilities in a highly competitive environment."
+              tags={["Aircraft Design", "Electronics", "Assembly", "Teamwork"]}
+              image={imagePaths.dbf}
+              link="#"
+            />
+            <ProjectGallery
+              title="Structural Dynamic Analysis of a Rocket"
+              description="Used Structural Dynamics to analyze stress on a Rocket Body Engine under an 'earthquake' composed of harmonic loading in X, Y, and Z directions. Coded the solver in Python and ran it by accessing the Alabama Supercomputing Cluster. Developed custom code to model harmonic loading in multiple directions simultaneously. Implemented Python solver algorithms to process complex structural equations efficiently. Analyzed displacement and stress distribution patterns to identify critical structural vulnerabilities and proposed design modifications to enhance structural integrity under extreme conditions."
+              tags={["Python", "Structural Analysis", "Supercomputing", "Rocket Design"]}
+              images={[imagePaths.rocket.displacement, imagePaths.rocket.stress]}
+              captions={["Displacement Analysis (disp_x)", "Stress Analysis (sigma_zx)"]}
+              link="#"
+            />
+            <ProjectGallery
+              title="Failure Analysis of Pressure Vessel"
+              description="Used Patran/Nastran to analyze failure points for a self-developed pressure vessel. Developed and redeveloped designs to create a suitable pressure vessel, demonstrating project development skills in the face of failures. Conducted iterative design processes to optimize vessel geometry and material selection. Performed comprehensive stress and thermal analysis under various operating conditions. Demonstrated systematic problem-solving approaches through multiple design iterations, ultimately creating a pressure vessel that exceeded safety requirements while minimizing weight and manufacturing complexity."
+              tags={["Patran/Nastran", "Pressure Vessel Design", "Failure Analysis", "Engineering Design"]}
+              images={[imagePaths.pressureVessel.main, imagePaths.pressureVessel.analysis]}
+              captions={["Pressure Vessel Model", "Thermal/Stress Analysis"]}
+              link="#"
+            />
           </div>
         </section>
 
