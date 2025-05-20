@@ -152,6 +152,15 @@ export default function Home() {
           </div>
           <div className="mt-8 space-y-8">
             <ExperienceGalleryEnhanced
+              title="Robotics Technician"
+              company="Serve Robotics"
+              period="April 2025 - Present"
+              description="Supporting the launch of Serve Robotics' Atlanta operations as one of the first technicians on the ground. Playing a key role in establishing local workflows and operational readiness for autonomous sidewalk delivery. Performing hands-on diagnostics, maintenance, and field service of delivery robots to ensure high fleet reliability and uptime. Collaborating with cross-functional teams to report issues, optimize robot performance, and improve service processes. Contributing to the successful deployment and scaling of cutting-edge robotics technology in a dynamic urban environment."
+              skills={["Robotics", "Diagnostics", "Maintenance", "Field Service", "Autonomous Systems"]}
+              images={["/images/Serve-robotics.jpg"]}
+              captions={["Serve Robotics Autonomous Delivery Robot"]}
+            />
+            <ExperienceGalleryEnhanced
               title="Undergraduate Research Assistant"
               company="Vertical Lift Research Center of Excellence"
               period="May 2024 - December 2024"
