@@ -43,6 +43,7 @@ export default function Home() {
       main: "/images/pressure-vessel.jpg",
       analysis: "/images/pressure-analysis.jpg",
     },
+    serveRobotics: "/images/Serve-robotics.png",
   }
 
   return (
@@ -122,13 +123,23 @@ export default function Home() {
                 My experience spans research in aerodynamics, drone technology, and structural analysis. I'm passionate
                 about applying engineering principles to solve complex problems in aerospace and beyond.
               </p>
-              <div className="flex flex-col gap-2 pt-4">
-                <div className="flex items-center gap-2">
-                  <span className="font-semibold">Education:</span>
-                  <span>Auburn University, B.S. Aerospace Engineering, Minor in Computer Science (GPA: 3.36/4.00)</span>
+              <div className="flex flex-col gap-4 pt-4">
+                <div className="flex items-start gap-2">
+                  <span className="font-semibold min-w-[90px]">Education:</span>
+                  <div className="flex flex-col gap-2">
+                    <div className="pb-2 border-b border-gray-200">
+                      <p className="font-medium">Auburn University</p>
+                      <p>B.S. Aerospace Engineering, Minor in Computer Science</p>
+                      <p className="text-sm text-gray-500">GPA: 3.36/4.00, Dean's List</p>
+                    </div>
+                    <div>
+                      <p className="font-medium">Pace Academy</p>
+                      <p>High School Honor Roll, 2020</p>
+                    </div>
+                  </div>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="font-semibold">Certification:</span>
+                  <span className="font-semibold min-w-[90px]">Certification:</span>
                   <span>FAA Part 107 License (April 2025)</span>
                 </div>
               </div>
@@ -152,13 +163,13 @@ export default function Home() {
           </div>
           <div className="mt-8 space-y-8">
             <ExperienceGalleryEnhanced
-              title="Robotics Technician"
+              title="Robotics Technician (Part-time)"
               company="Serve Robotics"
               period="April 2025 - Present"
               description="Supporting the launch of Serve Robotics' Atlanta operations as one of the first technicians on the ground. Playing a key role in establishing local workflows and operational readiness for autonomous sidewalk delivery. Performing hands-on diagnostics, maintenance, and field service of delivery robots to ensure high fleet reliability and uptime. Collaborating with cross-functional teams to report issues, optimize robot performance, and improve service processes. Contributing to the successful deployment and scaling of cutting-edge robotics technology in a dynamic urban environment."
               skills={["Robotics", "Diagnostics", "Maintenance", "Field Service", "Autonomous Systems"]}
-              images={["/images/Serve-robotics.jpg"]}
-              captions={["Serve Robotics Autonomous Delivery Robot"]}
+              images={[imagePaths.serveRobotics]}
+              captions={["Serve Robotics Autonomous Delivery Robot 'Felicia'"]}
             />
             <ExperienceGalleryEnhanced
               title="Undergraduate Research Assistant"
